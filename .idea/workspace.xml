@@ -6,6 +6,7 @@
       <change afterPath="$PROJECT_DIR$/.idea/Projeto Final.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/img/fma.png" afterDir="false" />
@@ -2060,7 +2061,7 @@
       <option name="presentableId" value="Default" />
       <updated>1566059662134</updated>
       <workItem from="1566059664763" duration="10787000" />
-      <workItem from="1566070647929" duration="283000" />
+      <workItem from="1566070647929" duration="558000" />
     </task>
     <servers />
   </component>
