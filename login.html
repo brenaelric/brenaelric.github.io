@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Projeto - iwtraining</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/login.css">
+  </head>
+  <body class="container-fluid">
+    <div class="row">
+      <section class="col-lg-9 d-none d-sm-block welcome">
+        <img class="animated fadeIn slower" src="img/fma.png" alt="Uma troca equivalente">
+        <h1>A vida é feita de trocas equivalentes</h1>
+        <p>
+          "Nada pode ser obtido sem uma espécie de sacrifício.
+            Para se obter algo é preciso oferecer algo em troca de valor equivalente.
+            Esse é o princípio básico da alquimia, a Lei da Troca Equivalente.
+            Naquela época, nós acreditávamos que essa fosse a lei absoluta."
+          </p>
+
+      </section>
+      <section class="col-lg-3 col-sm-12 login">
+        <div class="logsmall text-center mt-5">
+          <img src="img/fma.png" class="d-sm-block d-md-none">
+        </div>
+        <h2>Bem vindo à Alquimia Social</h2>
+        <ul class="nav nav-tabs nav-fill nav-pills" id="tab" role="tablist">
+          <li class="nav-item">
+            <a href="#login" class="nav-link active" data-toggle="tab">
+              Login
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#cadastro" class="nav-link" data-toggle="tab">
+              Cadastro
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active" id="login">
+            <form>
+              <input type="email" class="form-control form-control-lg mt-4" placeholder="Email"</input>
+              <input type="password" class="form-control form-control-lg mt-2" placeholder="Senha"></input>
+              <button class="btn btn-dark btn-lg btn-block mt-3">ENTRAR</button>
+
+              <div class="text-center mt-4">
+                <a class="recuperar-senha" href="#recuperar-senha" data-toggle="modal">
+                  Esqueci minha senha!
+                </a>
+
+                <div class="modal fade" ID="recuperar-senha" tabindex="-1">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <h5 class="modal-title">Recuperar Senha</h5>
+                        <button class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+
+                      <div class="modal-body">
+                        <form action="">
+                          <label for="recover">Email: </label>
+                          <input id="recover" type="email" class="form-control form-control-lg" placeholder="Informe seu email">
+                          <button class="btn btn-primary btn-lg mt-3">RECUPERAR</button>
+                        </form>
+                      </div>
+                        <form action="" method="post">
+                          <input type="email" class="form-control form-control-lg mt-4" placeholder="Email"</input>
+                          <input type="password" class="form-control form-control-lg mt-2" placeholder="Senha"></input>
+                          <button class="btn btn-dark btn-lg btn-block mt-3">ENTRAR</button>
+                        </form>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+          </div>
+
+        <div class="tab-pane" id="cadastro">
+          <form action="" method="post" id="form_cadastro">
+            <input required id="cadastro_nome" type="text" class="form-control form-control-lg mt-4" placeholder="nome">
+            <input required id="cadastro_email" type="email" class="form-control form-control-lg mt-2" placeholder="email">
+            <input required id="cadastro_senha" type="password" class="form-control form-control-lg mt-2" placeholder="Senha">
+            <button id="cadastro_btn" class="btn btn-dark btn-lg btn-block mt-3">CADASTRAR</button>
+          </form>
+
+          <div class="alert alert-infp" style="display: none; text-align: center;" id="cadastro_ok">
+            <strong>Pronto</strong>
+            <br>
+            Cadastro realizado!
+            <br>
+            <button id="novo_cadastro" class="btn btn-info">Novo Cadastro</button>
+          </div>
+          <div class="alert alert-danger" style="display: none; text-align: center;" id="cadastro_erro">
+            <strong>Erro: </strong> Tente novamente.
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <script src="js/config.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

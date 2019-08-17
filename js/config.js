@@ -1,0 +1,1 @@
+const api_url = 'https://brena-frontend-api.firebaseio.com';

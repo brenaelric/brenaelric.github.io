@@ -1,0 +1,60 @@
+html, body{
+  height: 100vh;
+  margin: 0px;
+}
+
+.welcome{
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #990000, #000000);
+  color: #fff
+}
+
+.welcome > img{
+  width: 400px;
+  margin-left: 40px;
+  margin-top: 50px;
+}
+
+.welcome > h1, p{
+  margin-left: 40px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.welcome > h1{
+  color: #888888;
+}
+
+.welcome > p{
+  width: 70%;
+}
+
+.login > h2{
+  margin-top: 20px;
+  text-align: center;
+  padding: 40px;
+  font-size: 24pt;
+  color: 	#303030;
+}
+
+.login > ul{
+  text-transform: uppercase;
+}
+
+.login > .nav-pills > li > .nav-link{
+  color: #404040;
+}
+
+.login > .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+  background-color: #480000;
+  color: #fff;
+}
+
+.recuperar-senha{
+  color: 	#303030;
+}
+
+.logsmall > img{
+  width: 400px;
+  margin-left: 40px;
+}
