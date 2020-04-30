@@ -1,16 +1,19 @@
-const listarUsuarios = () =>{
-  $('#tabela_usuarios').html('');
-  $.ajax({
-  url:`${api_url}/usuarios.json`,
-  success:(resposta) => {
-    for(let id in resposta){
-      let cadaUsuario = resposta[id];
+const atualizarQuantidade = (usuarios) =>{
+  $('#quantidade-usuarios').html(Object.keys(usuarios).length);
+}
+(new UserRequest()).buscarUsers(atualizarQuantidade);
 
-      $('#tabela_usuarios').append(`
+const atualizarTabela = (usuarios) =>{
+  $('#tabela_usuarios').html('');
+
+  for(let id in usuarios){
+    let cadaUsuario = usuarios[id];
+
+    $('#tabela_usuarios').append(`
           <tr>
             <td>${cadaUsuario.nome}</td>
             <td>${cadaUsuario.email}</td>
-            <td></td>
+            <td>${moment(cadaUsuario.registrado_em).format('DD/MM/YYYY HH:mm:ss')}</td>
             <td>
               <a href="#" class="btn btn-warning btn-sm">
                 Editar
@@ -21,11 +24,32 @@ const listarUsuarios = () =>{
             </td>
           </tr>
       `);
-    }
   }
-});
-};
 
+  let config ={
+    language:{
+      lengthMenu: "Mostrando _MENU_ alquimistas por página",
+      info: "Mostrando  _END_   de total de  _MAX_   (página _PAGE_ de  _PAGES_ )",
+      paginate:{
+        previous: 'Anterior',
+        next: 'Próxima',
+      },
+      search: 'Pesquisar',
+      zeroRecords: 'Nenhum resultado encontrado',
+      infoFiltered: 'Buscado num total de  _MAX_  alquimistas',
+      infoEmpty: '',
+    },
+  }
+
+  $('#datatables').DataTable(config).reload();
+
+  $('#datatables').DataTable(config);
+}
+
+const listarUsuarios = () =>{
+  (new UserRequest()).buscarUsers(atualizarTabela);
+
+};
 
 const excluirUsuario = (id, nome) =>{
 
@@ -34,21 +58,16 @@ const excluirUsuario = (id, nome) =>{
   $('#modal-excluir').modal();
 
   $('#confirmar-excluir').click(() =>{
-    $.ajax({
-      url:`https://brena-frontend-api.firebaseio.com/usuarios/${id}.json`,
-      type: 'DELETE',
-      success: (resposta) =>{
-        listarUsuarios();
-        $('#modal-excluir').modal('hide');
 
-        $.toast().reset('all');
-        $.toast({
-          heading: 'Pronto!',
-          icon: 'info',
-          text: `Alquimista ${nome} eliminado`,
-          position: 'top-right',
-        });
-      },
+    (new UserRequest()).excluirUsuario(id, listarUsuarios);
+    $('#modal-excluir').modal('hide');
+
+    $.toast().reset('all');
+    $.toast({
+      heading: 'Pronto!',
+      icon: 'info',
+      text: `Alquimista ${nome} eliminado`,
+      position: 'top-right',
     });
   });
 };
@@ -56,32 +75,23 @@ const excluirUsuario = (id, nome) =>{
 $('#form-cadastro').submit((evento) =>{
   evento.preventDefault();
 
-  const usuario ={
-    nome: $('#cadastro_nome').val(),
-    email: $('#cadastro_email').val(),
-    senha: $('#cadastro_senha').val(),
-  };
+  const usuario = new User(
+      $('#cadastro_nome').val(),
+      $('#cadastro_email').val(),
+      $('#cadastro_senha').val()
+  );
 
-  $.ajax({
-    url:`${api_url}/usuarios.json`,
-    type: 'POST',
-    dataType: 'json',
-    contentType: 'application/json',
-    data: JSON.stringify(usuario),
-    success: (resposta) =>{
-      $('#modal-novo-usuario').modal('hide');
-      listarUsuarios();
-      $('#form-cadastro')[0].reset();
-      $.toast({
-        heading: 'Pronto!',
-        text: 'Novo Alquimista Cadastrado!',
-        position: 'top-right',
-      });
-    },
-    error: (resposta) =>{
+  (new UserRequest()).cadastrarUsuario(usuario, listarUsuarios);
 
-    }
+  $('#modal-novo-usuario').modal('hide');
+  $('#form-cadastro')[0].reset();
+  $.toast({
+    heading: 'Pronto!',
+    text: 'Novo Alquimista Cadastrado!',
+    position: 'top-right',
   });
 });
 
 listarUsuarios();
+
+

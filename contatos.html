@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Contatos</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="node_modules/jquery-toast-plugin/dist/jquery.toast.min.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+<div id="navbarPrincipal"></div>
+
+<div class="container-fluid">
+    <div class="row">
+        <section class="col-lg-2"></section>
+
+        <section class="col-lg-10">
+            <div class=""row mt-3">
+            <div class="col-md-4 offset-md-8" id="alerts">
+
+            </div>
+    </div>
+    <div class="card mt-5">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="card-title">Contatos</h2>
+                </div>
+                <div class="col-6 text-right">
+                    <button class="btn btn-dark"  data-toggle="modal" data-target="#modal-novo-contato"> Novo Contato</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <table class="table table-hover tabe-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Registrado em</th>
+                    <th>Ações</th>
+                </tr>
+                </thead>
+                <tbody id="tabela_contatos">
+                </tbody>
+            </table>
+
+            <div id="modal-excluir" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Excluir Contato <span id="excluir-contato"></span>?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-info">Após exclusão a ação não poderá ser revertida!</div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" id="confirmar-excluir" class="btn btn-primary">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</div>
+</div>
+
+<div id="modal-novo-contato" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Novo Contato</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="form-cadastro" action="#" method="post">
+                <div class="modal-body">
+                    <input required id="cadastro_nome" type="text" class="form-control form-control-lg mt-4" placeholder="nome">
+                    <input required id="cadastro_email" type="email" class="form-control form-control-lg mt-2" placeholder="email">
+                    <input required id="cadastro_telefone" type="tel" class="form-control form-control-lg mt-2" placeholder="Telefone">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-dark">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/Componentes/navbar.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+<script src="js/Contato/ContactRequest.js"></script>
+<script src="js/contatos.js"></script>
+<script src="js/Contato/Contact.js"></script>
+</body>
+</html>

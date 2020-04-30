@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="208f7cb9-47a8-4f1e-8a0e-7134cd3359f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/contatos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/Componentes/cadastro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/Componentes/modal-recuperar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/Componentes/navbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/Contato/Contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/Contato/ContactRequest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/User/Componentes/modal-excluir.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/User/Componentes/modal-novo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/User/Componentes/tabela.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/User/User.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/User/UserRequest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/contatos.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/teste.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/usuarios.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/usuarios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios.html" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +39,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
@@ -44,7 +65,9 @@
       <option name="presentableId" value="Default" />
       <updated>1566059662134</updated>
       <workItem from="1566059664763" duration="10787000" />
-      <workItem from="1566070647929" duration="1088000" />
+      <workItem from="1566070647929" duration="1444000" />
+      <workItem from="1566662141641" duration="14066000" />
+      <workItem from="1567268858117" duration="12171000" />
     </task>
     <servers />
   </component>
@@ -56,10 +79,39 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/usuarios.js</url>
+          <line>53</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/usuarios.js</url>
+          <line>24</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/User/UserRequest.js</url>
+          <line>1</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/Componentes/navbar.js</url>
+          <line>10</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
